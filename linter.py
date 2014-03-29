@@ -51,9 +51,9 @@ class JSON(Linter):
         ]
 
         # Ignore comments in .sublime-* files.
-        if os.path.splitext(self.filename)[1] in extensions:
-            code = self.line_comment_re.sub('', code)
-            code = self.block_comment_re.sub(self.strip_comment, code)
+        #if os.path.splitext(self.filename)[1] in extensions:
+        code = self.line_comment_re.sub('', code)
+        code = self.block_comment_re.sub(self.strip_comment, code)
 
         try:
             json.loads(code)
